@@ -17,4 +17,8 @@ export const APis = {
     // auth route
     loginRoute: `${url}/login/user`,
     registerRoute: `${url}/create/user`,
+
+    // cart route
+    addTocart: `${url}/add/cart`,
+    getcartList: `${url}/get/cart`
 }

@@ -34,7 +34,6 @@ function Copyright(props) {
 const defaultTheme = createTheme();
 
 export function Login() {
-
   const navigate = useNavigate();
 
   const handleSubmit = async (event) => {
@@ -57,6 +56,7 @@ export function Login() {
         toast.success("Login successfully")
         setTimeout(() => {
           navigate("/")
+          window.location.reload("/");
         }, 1000);
       }
     } catch (error) {

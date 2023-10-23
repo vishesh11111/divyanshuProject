@@ -57,7 +57,7 @@ UserController.login = (req, res) => {
             res.status(200).send({ sucess: true, message: "Login sucessfullY", data: checkPresent })
         }
         else if (checkPresent) {
-            res.status(200).send({ sucess: false, message: "Please enter valid password" })
+            res.status(400).send({ sucess: false, message: "Please enter valid password" })
         } else {
             res.status(400).send({ sucess: false, message: "Please register first!" })
         }
@@ -67,7 +67,7 @@ UserController.login = (req, res) => {
             res.status(200).send({ sucess: true, message: "Login sucessful", data: checkPresent })
         }
         else if (checkPresent) {
-            res.status(200).send({ sucess: false, message: "Please enter valid password" })
+            res.status(400).send({ sucess: false, message: "Please enter valid password" })
         } else {
             res.status(400).send({ sucess: false, message: "Please register first!" })
         }

@@ -14,11 +14,29 @@ import {
 import axios from 'axios';
 import { APis } from '../../components/Apis/Apis';
 import { useParams } from 'react-router';
+import { toast, ToastContainer } from "react-toastify"
+import { useDispatch } from "react-redux"
+import { CartLength } from '../../Redux/action';
+import { TextField, Box } from '@mui/material';
+import AddIcon from '@mui/icons-material/Add';
+import RemoveIcon from '@mui/icons-material/Remove';
 
 let productData = JSON.parse(localStorage.getItem("product"))
 
 export const Details = () => {
+  const [quantity, setQuantity] = useState(1);
   // /get/product/by/id
+  const dispatch = useDispatch()
+
+  const handleIncrement = () => {
+    setQuantity(quantity + 1);
+  };
+
+  const handleDecrement = () => {
+    if (quantity > 1) {
+      setQuantity(quantity - 1);
+    }
+  };
 
   const [state, setState] = useState({
     data: {},
@@ -47,6 +65,29 @@ export const Details = () => {
     setSelectedImage(image);
   };
 
+  const handleCart = async (data) => {
+    try {
+      let check_user = localStorage.getItem('user');
+      if (check_user) {
+        let CartData = { ...data, userId: JSON.parse(check_user).id };
+        let result = await axios({
+          method: "post",
+          data: CartData,
+          url: APis?.addTocart
+        })
+        if (result) {
+          let cartData = await GetCart();
+          console.log("____----->", cartData);
+          dispatch(CartLength(cartData.length))
+          toast.success("Add to cart successfully");
+        }
+      } else {
+        toast.warning("Please Login first");
+      }
+    } catch (error) {
+      console.log(error);
+    }
+  }
 
   console.log("productData==>", state?.data)
 
@@ -88,14 +129,56 @@ export const Details = () => {
                 Price: ${state?.data?.price}
               </Typography>
               {/* Add more product details here */}
+              <Box sx={{ marginLeft: "32%", width: "40%" }} display="flex" alignItems="center">
+                <Button
+                  variant="contained"
+                  color="primary"
+                  size="small"
+                  onClick={handleDecrement}
+                >
+                  <RemoveIcon />
+                </Button>
+                <TextField
+                  type="number"
+                  variant="outlined"
+                  size="small"
+                  value={quantity}
+                  inputProps={{
+                    style: { margin: "auto", textAlign: 'center', width: "50px" },
+                    min: 1,
+                  }}
+                />
+                <Button
+                  variant="contained"
+                  color="primary"
+                  size="small"
+                  onClick={handleIncrement}
+                >
+                  <AddIcon />
+                </Button>
+              </Box>
               <Grid sx={{ marginTop: "10%" }}>
-                <Button variant="contained">Add to Cart</Button>
+                <Button variant="contained" onClick={() => handleCart(state?.data)}>Add to Cart</Button>
               </Grid>
             </Grid>
           </Grid>
         </Paper>
       </Container>
-
+      <ToastContainer />
     </div>
   )
+}
+
+
+export const GetCart = async () => {
+  try {
+    let check_user = localStorage.getItem('user');
+    if (check_user) {
+      let result = await axios.get(`${APis?.getcartList}?userId=${JSON.parse(check_user).id}`);
+      return result?.data?.data
+    }
+  } catch (error) {
+    return [];
+    console.log(error)
+  }
 }
