@@ -222,5 +222,117 @@
       "type": "deals-of-the-day"
     },
     "userId": 615597512202
+  },
+  {
+    "qty": 1,
+    "id": "76d14d65-21d0-4b41-8ee1-eef4c2232793",
+    "slug": "yellow-casual-sweater",
+    "shop": {
+      "id": "d3a8d0c3-ea4d-4caa-858e-954fee09ff24",
+      "slug": "scarlett-beauty",
+      "user": {
+        "id": "ba29997c-ed76-4f59-ae31-111dfa532b75",
+        "email": "Clementina_Raynor@yahoo.com",
+        "phone": "821.333.9362 x9878",
+        "avatar": "https://cloudflare-ipfs.com/ipfs/Qmd3W5DuhgHirLHGVixi6V76LhCkZUz6pnFt5AJBiyvHye/avatar/1006.jpg",
+        "password": "673_HVvWUdYguFe",
+        "dateOfBirth": "2003-06-14T15:18:27.382Z",
+        "verified": true,
+        "name": {
+          "firstName": "Aracely",
+          "lastName": "Doyle"
+        }
+      },
+      "email": "Amira.McDermott83@yahoo.com",
+      "name": "Scarlett Beauty",
+      "phone": "(613) 343-9004",
+      "address": "845 N. Stonybrook Ave. Tonawanda, NY 14210, Denmark",
+      "verified": false,
+      "coverPicture": "/assets/images/banners/cycle.png",
+      "profilePicture": "/assets/images/faces/propic.png",
+      "socialLinks": {
+        "facebook": null,
+        "youtube": null,
+        "twitter": null,
+        "instagram": null
+      }
+    },
+    "title": "Yellow Casual Sweater",
+    "brand": null,
+    "price": 110,
+    "size": null,
+    "colors": [],
+    "discount": 0,
+    "thumbnail": "/assets/images/products/Fashion/Clothes/21.YellowCasualSweater.png",
+    "images": [
+      "/assets/images/products/Fashion/Clothes/21.YellowCasualSweater.png",
+      "/assets/images/products/Fashion/Clothes/21.YellowCasualSweater.png"
+    ],
+    "categories": [
+      "Women's Fashion"
+    ],
+    "status": null,
+    "reviews": [],
+    "for": {
+      "demo": "market-2",
+      "type": "deals-of-the-day"
+    },
+    "userId": 11614643161920
+  },
+  {
+    "qty": 1,
+    "id": "94452fd4-89fb-426e-b90e-db955517d167",
+    "slug": "gray-overcoat-women",
+    "shop": {
+      "id": "14f0aa30-b962-47e4-aab9-b6b9b40f3d6c",
+      "slug": "scroll-through",
+      "user": {
+        "id": "dea7c262-0866-4fa7-a92a-0327e204d010",
+        "email": "Fausto.Schowalter@gmail.com",
+        "phone": "859-699-8461 x50403",
+        "avatar": "https://cloudflare-ipfs.com/ipfs/Qmd3W5DuhgHirLHGVixi6V76LhCkZUz6pnFt5AJBiyvHye/avatar/1048.jpg",
+        "password": "1qfhl8ZZ88W6ain",
+        "dateOfBirth": "1974-02-27T05:00:31.895Z",
+        "verified": true,
+        "name": {
+          "firstName": "Dan",
+          "lastName": "Purdy"
+        }
+      },
+      "email": "Jayce_Corkery32@gmail.com",
+      "name": "Scroll Through",
+      "phone": "(613) 343-9004",
+      "address": "845 N. Stonybrook Ave. Tonawanda, NY 14210, Denmark",
+      "verified": false,
+      "coverPicture": "/assets/images/banners/banner.png",
+      "profilePicture": "/assets/images/faces/propic(1).png",
+      "socialLinks": {
+        "facebook": null,
+        "youtube": null,
+        "twitter": null,
+        "instagram": null
+      }
+    },
+    "title": "Gray Overcoat Women",
+    "brand": null,
+    "price": 110,
+    "size": null,
+    "colors": [],
+    "discount": 0,
+    "thumbnail": "/assets/images/products/Fashion/Clothes/20.GrayOvercoatWomen.png",
+    "images": [
+      "/assets/images/products/Fashion/Clothes/20.GrayOvercoatWomen.png",
+      "/assets/images/products/Fashion/Clothes/20.GrayOvercoatWomen.png"
+    ],
+    "categories": [
+      "Women's Fashion"
+    ],
+    "status": null,
+    "reviews": [],
+    "for": {
+      "demo": "market-2",
+      "type": "deals-of-the-day"
+    },
+    "userId": 11614643161920
   }
 ]

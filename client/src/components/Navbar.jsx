@@ -310,8 +310,8 @@ export const Navbar = () => {
                         <Box sx={{ flexGrow: 0.02, display: "flex" }}>
                             <ShoppingBagIcon />
                             <Text sx={{
-                                backgroundColor: "red", padding: "3.5px", borderRadius: "50%",
-                                height: "20px", paddingTop: "-6px", paddingBottom: "7px", color: "white", fontSize: "11px"
+                                backgroundColor: "red", padding: "3.5px", borderRadius: "50%",height:"10px",width:"20px",
+                                 paddingTop: "6px", paddingBottom: "7px", color: "white", fontSize: "11px",display:"flex",justifyContent:"center",alignItems:"center"
                             }}>{cartLength}</Text>
                         </Box>
                         {getuserPresent ? <Box sx={{ flexGrow: 0.04 }}>
