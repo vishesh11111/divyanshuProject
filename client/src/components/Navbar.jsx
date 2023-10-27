@@ -229,6 +229,10 @@ export const Navbar = () => {
         setOpen(true);
     }
 
+    const handleNaviagteToCart = () => {
+        navigate(`/get/cart/list/${JSON.parse(checkUser)?.id}`)
+    }
+
     console.log("=====>==>", getuserPresent);
 
     const settings = ["Setting 1", "Setting 2", "Setting 3"];
@@ -307,11 +311,11 @@ export const Navbar = () => {
                         )}
 
                         {/* User menu */}
-                        <Box sx={{ flexGrow: 0.02, display: "flex" }}>
+                        <Box onClick={handleNaviagteToCart} sx={{ flexGrow: 0.02, display: "flex", cursor: "pointer" }}>
                             <ShoppingBagIcon />
                             <Text sx={{
-                                backgroundColor: "red", padding: "3.5px", borderRadius: "50%",height:"10px",width:"20px",
-                                 paddingTop: "6px", paddingBottom: "7px", color: "white", fontSize: "11px",display:"flex",justifyContent:"center",alignItems:"center"
+                                backgroundColor: "red", padding: "3.5px", borderRadius: "50%", height: "10px", width: "20px",
+                                paddingTop: "6px", paddingBottom: "7px", color: "white", fontSize: "11px", display: "flex", justifyContent: "center", alignItems: "center"
                             }}>{cartLength}</Text>
                         </Box>
                         {getuserPresent ? <Box sx={{ flexGrow: 0.04 }}>

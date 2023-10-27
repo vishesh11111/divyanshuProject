@@ -20,5 +20,6 @@ export const APis = {
 
     // cart route
     addTocart: `${url}/add/cart`,
-    getcartList: `${url}/get/cart`
+    getcartList: `${url}/get/cart`,
+    increaseQty: `${url}/increase/qty`
 }

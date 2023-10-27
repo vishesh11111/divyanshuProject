@@ -27,6 +27,8 @@ route.get("/get/products", ProductController.readAllItems)
 route.post("/add/cart", CartController.createItem)
 route.get("/get/cart", CartController.readAllItems)
 route.post("/delete/cart", CartController.deleteItem)
+route.post("/increase/qty", CartController.IncreaseQty)
+
 
 // order
 route.post("/create/order", OrderController.createOrder)

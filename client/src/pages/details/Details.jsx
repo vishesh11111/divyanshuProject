@@ -69,7 +69,7 @@ export const Details = () => {
     try {
       let check_user = localStorage.getItem('user');
       if (check_user) {
-        let CartData = { ...data, userId: JSON.parse(check_user).id };
+        let CartData = { ...data, qty: quantity, userId: JSON.parse(check_user).id };
         let result = await axios({
           method: "post",
           data: CartData,
